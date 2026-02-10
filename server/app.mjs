@@ -18,6 +18,14 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Hello TechUp!");
+});
+
+app.listen(Port, () => {
+  console.log(`Server is running at ${port}`);
+});
+
 app.get("/profiles", (req, res) => {
   res.status(200).json({ message: {
     "name": "john",
