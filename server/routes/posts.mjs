@@ -1,6 +1,6 @@
 import express from "express";
 import connectionPool from "../utils/db.mjs";
-import validatePostData from "../‎middleware/postValidation.mjs";
+import validatePostData from "../middleware/postValidation.mjs";
 
 const router = express.Router();
 

@@ -1,10 +1,8 @@
 // Create PostgreSQL Connection Pool here !
 import * as pg from "pg";
 const { Pool } = pg.default;
-
 const connectionPool = new Pool({
-  connectionString:
-    "postgresql://postgres:Tyuwer58@localhost:5432/cat-friend",
+  // ตรงนี้ต้องเปลี่ยน connectionString เป็นของตัวเองด้วยนะ
+  connectionString: process.env.CONNECTION_STRING,
 });
-
 export default connectionPool;
