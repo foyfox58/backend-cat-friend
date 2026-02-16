@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import assignmentRoutes from "./routes/assignmentRoutes.mjs";
+import postRoutes from "./routes/posts.mjs";
+
 
 dotenv.config();
 
@@ -21,8 +23,9 @@ app.use(
   })
 );
 
-// เรียกใช้ routes ทั้งหมด
+// ✅ เรียกใช้ routes
 app.use("/", assignmentRoutes);
+app.use("/", postRoutes); // ✅ เพิ่มตรงนี้
 
 app.listen(PORT, () => {
   console.log(`Server is running at ${PORT}`);
